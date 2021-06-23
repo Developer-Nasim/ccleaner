@@ -1,0 +1,270 @@
+
+
+// Utitlities
+
+@import "../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Page - Home - Tab -------------------- //
+
+.home {
+
+    // Product Tour
+
+    .product-tour {
+
+        // Primary
+
+        &.primary {
+            
+            // Content
+            
+            .product-tour-content {
+                .content-tab {
+                    .tab-nav {
+                        .nav-pills {
+                            @include display-block;
+
+                            .nav-item {
+                                .nav-link {
+                                    @include position-relative;
+
+                                    @include text-align-center;
+
+                                    @include py-4;
+
+                                    border-radius       : 0em;
+
+                                    &:before {
+                                        @include display-none;
+                                    }
+
+                                    span {
+                                        @include display-block;
+
+                                        &.icon {
+                                            @include mb-1;
+
+                                            i {
+                                                color       : $c-white;
+                                            }
+                                        }
+
+                                        &.text {
+                                            @include font-primary-regular;
+                                            @include p;
+
+                                            color           : $c-white;
+                                        }
+                                    }
+
+                                    &.active {
+                                        background-color    : #3474D0;
+
+                                        &:hover {
+                                            background-color    : #2564be;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background-color    : #4D4D4D;
+                                    }
+                                }
+                            }
+                        }
+
+                        .tab-content {
+                            background-color            : #2c343c;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                // Content
+            
+                .product-tour-content {
+                    .content-tab {
+                        .tab-nav {
+                            .nav-pills {
+                                @include display-flex;
+
+                                @include align-items-center;
+
+                                justify-content      : center;
+
+                                .nav-item {
+                                    width           : 20%;
+
+                                    .nav-link {
+                                        @include py-2;
+                                        @include px-4;
+
+                                        span {
+                                            &.text {
+                                                @include small;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                // Content
+            
+                .product-tour-content {
+                    .content-tab {
+                        .tab-nav {
+                            .nav-pills {
+                                @include display-webkit-box;
+
+                                @include overflow-y-hidden;
+                                @include overflow-x-auto;
+
+                                flex-wrap           : nowrap;
+
+                                .nav-item {
+                                    width           : 40%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Value
+
+    .value {
+
+        // Primary
+
+        &.primary {
+            .value-tab {
+                .tab-nav {
+                    .nav-pills {
+                        justify-content         : center;
+                        
+                        .nav-item {
+                            .nav-link {
+                                @include position-relative;
+
+                                @include display-flex;
+
+                                @include align-items-center;
+
+                                @include px-5;
+
+                                flex-direction      : column;
+
+                                height              : 8rem;
+
+                                border-bottom       : 3px solid transparent;
+                                border-radius       : 0em;
+
+                                span {
+                                    @include display-block;
+
+                                    @include text-align-center;
+
+                                    &.icon {
+                                        @include display-flex;
+
+                                        @include align-items-center;
+
+                                        @include mx-auto;
+                                        @include mb-2;
+
+                                        justify-content     : center;
+
+                                        height              : 3rem;
+
+                                        img {
+                                            width           : 2.25rem;
+                                        }
+                                    }
+
+                                    &.text {
+                                        @include font-primary-regular;
+                                        @include h6;
+
+                                        max-width       : 10rem;
+
+                                        color           : $c-black;
+                                    }
+                                }
+
+                                &:after {
+                                    @include position-absolute;
+
+                                    content             : '';
+
+                                    width               : 0;
+                                    height              : 3px;
+
+                                    bottom              : -3px;
+                                    left                : 50%;
+
+                                    transform           : translateX(-50%);
+
+                                    background-color    : #07c;
+
+                                    transition          : 0.3s ease;
+                                }
+
+                                &.active {
+                                    background-color    : transparent;
+
+                                    &:after {
+                                        @include width-100;
+
+                                        transition      : 0.3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .value-tab {
+                    .tab-nav {
+                        .nav-pills {
+                            @include display-webkit-box;
+
+                            @include overflow-y-hidden;
+                            @include overflow-x-auto;
+
+                            flex-wrap       : nowrap;
+
+                            .nav-item {
+                                .nav-link {
+                                    @include px-4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .value-tab {
+                    .tab-nav {
+                        .nav-pills {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

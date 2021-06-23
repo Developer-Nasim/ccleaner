@@ -1,0 +1,35 @@
+
+
+// Utitlities
+
+@import "../../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Navigation - Footbar - Button -------------------- //
+
+.footbar {
+
+    // Primary
+
+    &.primary {
+        .footbar-link {
+            .link-footbar {
+                @include font-primary-regular;
+                @include p;
+
+                color               : #6d6d6d;
+            }
+        }
+
+        .footbar-copyright {
+            .copyright-link {
+                .link-copyright {
+                    @include font-primary-light;
+                    
+                    font-size       : .8571em;
+
+                    color           : #6d6d6d;
+                }
+            }
+        }
+    }
+}

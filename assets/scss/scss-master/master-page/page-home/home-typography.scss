@@ -1,0 +1,1279 @@
+
+
+// Utitlities
+
+@import "../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Page - Home - Typography -------------------- //
+
+.home {
+
+    // Hero
+
+    .hero {
+
+        // Primary
+
+        &.primary {
+            .hero-text {
+                .title {
+                    h1 {
+                        @include position-relative;
+
+                        @include pb-4;
+                        @include mb-4;
+
+                        @include font-primary-bold;
+                        
+                        font-size           : 42px;
+                        line-height         : 1.25;
+
+                        color               : $c-black;
+                        
+                        &:after {
+                            @include position-absolute;
+
+                            content             : '';
+
+                            width               : 40px;
+                            height              : 2px;
+
+                            bottom              : 0;
+                            left                : 0;
+
+                            background-color    : $c-black;
+                        } 
+                    }
+                }
+
+                .subtitle {
+                    h4 {
+                        @include font-primary-semi-bold;
+                        @include h6;
+
+                        line-height     : 1.25;
+
+                        color           : $c-black;
+                    }
+                }
+            }
+
+            .hero-info {
+                .info-caption {
+                    .caption {
+                        @include font-primary-regular;
+                        @include small;
+
+                        @include text-transform-uppercase;
+
+                        color               : $c-white;
+                    }
+                }
+
+                .info-text {
+                    .title {
+                        h3 {
+                            @include font-primary-semi-bold;
+                            @include h6;
+
+                            line-height     : 1.25;
+
+                            color           : $c-black;
+                        }
+                    }
+                }
+
+                .info-link {
+                    .link-info {
+                        @include font-primary-semi-bold;
+                        @include h6;
+
+                        @include text-decoration-underline;
+
+                        line-height     : 1.25;
+
+                        color           : #d23d3d;
+
+                        &:hover {
+                            @include text-decoration-none;
+                        }
+                    }
+                }
+            }
+
+            .hero-list {
+                .list-text {
+                    .subtitle {
+                        h4 {
+                            @include display-flex;
+
+                            @include align-items-baseline;
+
+                            span {
+                                &.icon {
+                                    @include mr-2;
+
+                                    i {
+                                        @include p;
+                                    }
+                                }
+
+                                &.text {
+                                    @include font-primary-regular;
+                                    @include h6;
+
+                                    color       : $c-black;
+
+                                    > span {
+                                        @include font-primary-bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hero-button {
+                .caption {
+                    span {
+                        @include font-primary-semi-bold;
+
+                        font-size           : 13px;
+                        font-style          : italic;
+                        line-height         : 1.5;
+
+                        color               : $c-grey;
+                    }
+                }
+            }
+
+            .hero-rating {
+                .rating-text {
+                    .caption {
+                        span {
+                            @include font-primary-regular;
+                            @include small;
+
+                            @include text-transform-uppercase;
+
+                            color           : $c-black;
+                        }
+                    }
+
+                    .icon {
+                        i {
+                            color           : #f0a61d;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .hero-text {
+                    .title {
+                        h1 {
+                            @include h2;
+                        }
+                    }
+                }
+
+                .hero-list {
+                    .list-text {
+                        .subtitle {
+                            h4 {
+                                span {
+                                    &.icon {
+                                        i {
+                                            color   : $c-black;
+                                        }
+                                    }
+
+                                    &.text {
+                                        color       : $c-black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .hero-rating {
+                    .rating-text {
+                        .caption {
+                            span {
+                                color           : $c-black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .hero-text {
+                    .title {
+                        h1 {
+                            @include h3;
+
+                            &:after {
+                                left                : 50%;
+
+                                transform           : translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Feature
+
+    .feature {
+
+        // Primary
+
+        &.primary {
+            .feature-text {
+                .title {
+                    h3 {
+                        @include mb-0;
+
+                        @include font-primary-semi-bold;
+                        @include h6;
+
+                        @include text-transform-uppercase;
+
+                        color           : $c-black;
+                    }
+                }
+            }
+        }
+    }
+
+    // Product Tour
+
+    .product-tour {
+
+        // Primary
+
+        &.primary {
+            
+            // Header
+
+            .product-tour-header {
+                .header-text {
+                    .title {
+                        h3 {
+                            @include font-primary-light;
+                            @include h2;
+
+                            color           : $c-black;
+                        }
+                    }
+
+                    .desc {
+                        p {
+                            @include font-primary-regular;
+                            @include h6;
+
+                            color           : $c-black;
+                        }
+                    }
+                }
+            }
+
+            // Content
+
+            .product-tour-content {
+                .content-title {
+
+                    // Primary
+
+                    &.primary {
+                        .title-text {
+                            .title {
+                                h3 {
+                                    @include mb-0;
+
+                                    @include font-primary-semi-bold;
+                                    @include p;
+
+                                    color           : $c-black;
+                                }
+                            }
+                        }
+                    }
+
+                    // Secondary
+
+                    &.secondary {
+                        .title-text {
+                            .title {
+                                h3 {
+                                    @include mb-0;
+
+                                    @include font-primary-bold;
+                                    @include h5;
+
+                                    color           : $c-white;
+                                }
+                            }
+
+                            .subtitle {
+                                h4 {
+                                    @include mb-0;
+
+                                    @include font-primary-light;
+                                    @include p;
+
+                                    color           : #A4AEAC;
+                                }
+                            }
+                        }
+
+                        .title-caption {
+                            .caption {
+                                span {
+                                    @include mb-0;
+
+                                    @include font-primary-light;
+                                    @include small;
+
+                                    color           : #A4AEAC;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .content-info {
+                    .info-text {
+                        .title {
+                            h3 {
+                                @include mb-0;
+
+                                @include font-primary-semi-bold;
+                                @include h5;
+
+                                color           : $c-white;
+                            }
+                        }
+
+                        .subtitle {
+                            h4 {
+                                @include mb-0;
+
+                                @include font-primary-regular;
+                                @include h6;
+
+                                color           : $c-white;
+                            }
+                        }
+                    }
+                }
+
+                .content-text {
+                    .desc {
+                        p {
+                            @include font-primary-regular;
+                            @include p;
+
+                            color               : #bcc8d1;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                // Content
+
+                .product-tour-content {
+                    .content-info {
+                        .info-text {
+                            .title {
+                                h3 {
+                                    @include h6;
+                                }
+                            }
+
+                            .subtitle {
+                                h4 {
+                                    @include p;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Quote
+
+    .quote {
+        
+        // Primary
+
+        &.primary {
+            .quote-text {
+                .title {
+                    h3 {
+                        @include position-relative;
+
+                        @include pb-4;
+                        @include mb-4;
+
+                        @include font-primary-light;
+                        @include h2;
+
+                        color               : $c-black;
+                        
+                        &:after {
+                            @include position-absolute;
+
+                            content             : '';
+
+                            width               : 40px;
+                            height              : 2px;
+
+                            bottom              : 0;
+                            left                : 50%;
+
+                            transform           : translateX(-50%);
+
+                            background-color    : $c-black;
+                        } 
+                    }
+                }
+
+                .subtitle {
+                    h4 {
+                        @include font-primary-regular;
+                        @include h6;
+
+                        color           : $c-black;
+                    }
+                }
+
+                .desc {
+                    p {
+                        @include font-primary-regular;
+                        @include h6;
+
+                        color           : $c-black;
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .quote-text {
+                    .title {
+                        h3 {
+                            @include h3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Value
+
+    .value {
+
+        // Primary
+
+        &.primary {
+            .value-tab {
+                .tab-content {
+                    .content-wrapper {
+
+                        // Primary
+
+                        &.primary {
+                            .content-text {
+                                .title {
+                                    h3 {
+                                        color               : $c-black;
+                        
+                                        &:after {
+                                            background-color    : $c-black;
+                                        } 
+                                    }
+                                }
+
+                                .desc {
+                                    p {
+                                        color                   : $c-black;
+                                    }
+                                }
+                            }
+                        }
+
+                        // Secondary
+
+                        &.secondary {
+                            .content-text {
+                                .title {
+                                    h3 {
+                                        color               : $c-white;
+                        
+                                        &:after {
+                                            background-color    : $c-white;
+                                        } 
+                                    }
+                                }
+
+                                .desc {
+                                    p {
+                                        color                   : $c-white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .content-text {
+                        .title {
+                            h3 {
+                                @include position-relative;
+
+                                @include pb-4;
+                                @include mb-4;
+
+                                @include font-primary-light;
+                                @include h2;
+
+                                line-height         : 1.35;
+
+                                &:after {
+                                    @include position-absolute;
+
+                                    content             : '';
+
+                                    width               : 40px;
+                                    height              : 1px;
+
+                                    bottom              : 0;
+                                    left                : 0;
+                                } 
+                            }
+                        }
+
+                        .desc {
+                            p {
+                                @include font-primary-light;
+                                @include h6;
+
+                                line-height             : 1.75;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .value-tab {
+                    .tab-content {
+                        .content-text {
+                            .title {
+                                h3 {
+                                    @include h3;
+
+                                    line-height         : 1.35;
+
+                                    &:after {
+                                        left            : 50%;
+
+                                        transform       : translateX(-50%);
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .value-tab {
+                    .tab-content {
+                        .content-text {
+                            .title {
+                                h3 {
+                                    @include h4;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // What
+
+    .what {
+
+        // Primary
+
+        &.primary {
+            
+            // Header
+
+            .what-header {
+                .header-text {
+                    .title {
+                        h3 {
+                            @include font-primary-light;
+                            @include h2;
+
+                            color           : $c-black;
+                        }
+                    }
+
+                    .desc {
+                        p {
+                            @include font-primary-regular;
+                            @include h6;
+
+                            color           : $c-black;
+                        }
+                    }
+                }
+            }
+
+            // Content
+
+            .what-content {
+                .content-slider {
+                    .slider-text {
+                        .title {
+                            h3 {
+                                @include position-relative;
+
+                                @include display-inline-block;
+
+                                @include width-auto;
+
+                                @include font-primary-regular;
+                                @include h6;
+
+                                @include text-transform-uppercase;
+
+                                line-height     : 1.5;
+
+                                color           : $c-black;
+
+                                span {
+                                    @include position-absolute;
+
+                                    @include px-2;
+
+                                    @include font-primary-regular;
+                                    @include smallest;
+
+                                    @include text-transform-uppercase;
+
+                                    top                         : -10px;
+                                    right                       : -45px;
+
+                                    color                       : $c-white;
+
+                                    background-color            : #d23d3d;
+
+                                    border-radius               : 0.25em;
+                                }
+                            }
+                        }
+
+                        .desc {
+                            p {
+                                @include font-primary-regular;
+                                @include p;
+
+                                line-height     : 1.75;
+
+                                color           : $c-black;
+                            }
+                        }
+                    }
+                }
+
+                .content-text {
+                    .desc {
+                        p {
+                            @include font-primary-semi-bold;
+                            @include p;
+
+                            font-style      : italic;
+
+                            color           : $c-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Testimonial
+
+    .testimonial {
+
+        // Primary
+
+        &.primary {
+            .testimonial-text {
+                .title {
+                    h3 {
+                        @include position-relative;
+
+                        @include pb-4;
+                        @include mb-4;
+
+                        @include font-primary-light;
+                        
+                        font-size           : 32px;
+                        line-height         : 1.5;
+
+                        color               : $c-black;
+                        
+                        &:after {
+                            @include position-absolute;
+
+                            content             : '';
+
+                            width               : 40px;
+                            height              : 2px;
+
+                            bottom              : 0;
+                            left                : 0;
+
+                            background-color    : $c-black;
+                        } 
+                    }
+                }
+            }
+
+            .testimonial-rating {
+                .rating-text {
+                    .subtitle {
+                        h4 {
+                            @include mb-0;
+
+                            @include font-primary-regular;
+                            @include h6;
+
+                            color               : $c-black;
+                        }
+                    }
+
+                    .caption {
+                        span {
+                            a {
+                                @include font-primary-light;
+                                @include p;
+
+                                color           : $c-grey;
+
+                                &:hover {
+                                    @include text-decoration-underline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .testimonial-text {
+                    .title {
+                        h3 {
+                            @include h2;
+
+                            &:after {
+                                left                : 50%;
+
+                                transform           : translateX(-50%);
+                            } 
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .testimonial-text {
+                    .title {
+                        h3 {
+                            @include h4;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Secondary
+
+        &.secondary {
+
+            // Header
+
+            .testimonial-header {
+                .header-text {
+                    .title {
+                        h3 {
+                            @include position-relative;
+
+                            @include display-inline-block;
+
+                            @include width-auto;
+
+                            @include font-primary-light;
+
+                            z-index             : 10;
+                        
+                            font-size           : 36px;
+                            line-height         : 1.5;
+
+                            color               : $c-black; 
+                            
+                            > span {
+                                @include position-absolute;
+
+                                @include display-flex;
+
+                                @include align-items-center;
+
+                                justify-content     : center;
+
+                                z-index             : -1; 
+
+                                width               : 4rem;
+                                height              : 4rem;
+
+                                top                 : -2.25rem;
+                                left                : -2.25rem;
+
+                                color               : $c-white;
+
+                                background-color    : #627f15;
+
+                                border-radius       : 100%;
+
+                                > span {
+                                    @include mt-3;
+                                    @include mr-2;
+
+                                    font-style      : italic;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                // Header
+
+                .testimonial-header {
+                    .header-text {
+                        .title {
+                            h3 {
+                                @include h2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                // Header
+
+                .testimonial-header {
+                    .header-text {
+                        .title {
+                            h3 {
+                                @include h3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // About
+
+    .about {
+        
+        // Primary
+
+        &.primary {
+            .about-text {
+                .title {
+                    h3 {
+                        @include position-relative;
+
+                        @include pb-4;
+                        @include mb-4;
+
+                        @include font-primary-light;
+                        @include h2;
+
+                        color               : $c-black;
+                        
+                        &:after {
+                            @include position-absolute;
+
+                            content             : '';
+
+                            width               : 40px;
+                            height              : 2px;
+
+                            bottom              : 0;
+                            left                : 0;
+
+                            background-color    : $c-black;
+                        } 
+                    }
+                }
+
+                .subtitle {
+                    h4 {
+                        @include font-primary-semi-bold;
+                        @include h5;
+
+                        color           : $c-black;
+                    }
+                }
+
+                .desc {
+                    p {
+                        @include font-primary-regular;
+                        @include p;
+
+                        line-height     : 1.75;
+
+                        color           : $c-black;
+
+                        a {
+                            @include text-decoration-underline;
+
+                            color       : #627f15;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .about-text {
+                    .title {
+                        h3 {
+                            &:after {
+                                left        : 50%;
+
+                                transform   : translateX(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .about-text {
+                    .title {
+                        h3 {
+                            @include h3;
+                        }
+                    }
+
+                    .subtitle {
+                        h4 {
+                            @include h5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Statistic
+
+    .statistic {
+        
+        // Primary
+
+        &.primary {
+            .statistic-text {
+                .title {
+                    h3 {
+                        @include position-relative;
+
+                        @include pb-4;
+                        @include mb-4;
+
+                        @include font-primary-light;
+                        @include h2;
+
+                        color               : $c-black;
+                        
+                        &:after {
+                            @include position-absolute;
+
+                            content             : '';
+
+                            width               : 40px;
+                            height              : 2px;
+
+                            bottom              : 0;
+                            left                : 50%;
+
+                            transform           : translateX(-50%);
+
+                            background-color    : $c-black;
+                        } 
+                    }
+                }
+            }
+
+            .statistic-info {
+                .info-text {
+                    .title {
+                        h3 {
+                            @include mb-0;
+
+                            @include font-primary-semi-bold;
+                            @include h6;
+
+                            color               : $c-black;
+                        }
+                    }
+
+                    .desc {
+                        p {
+                            @include mb-0;
+
+                            @include font-primary-regular;
+                            @include p;
+
+                            line-height         : 1.5;
+
+                            color               : $c-grey;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .statistic-text {
+                    .title {
+                        h3 {
+                            @include h3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Award
+
+    .award {
+
+        // Primary
+
+        &.primary {
+            .award-text {
+                .title {
+                    h3 {
+                        @include font-primary-light;
+                        @include h2;
+
+                        color           : $c-black;
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .award-text {
+                    .title {
+                        h3 {
+                            @include h3;
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .award-text {
+                    .title {
+                        h3 {
+                            @include h4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Conversion
+
+    .conversion {
+        
+        // Primary
+
+        &.primary {
+            .conversion-text {
+                .title {
+                    h3 {
+                        @include position-relative;
+
+                        @include pb-4;
+                        @include mb-4;
+
+                        @include font-primary-bold;
+                        @include h2;
+
+                        color               : $c-white;
+                        
+                        &:after {
+                            @include position-absolute;
+
+                            content             : '';
+
+                            width               : 40px;
+                            height              : 2px;
+
+                            bottom              : 0;
+                            left                : 0;
+
+                            background-color    : $c-white;
+                        } 
+                    }
+                }
+
+                .desc {
+                    p {
+                        @include font-primary-regular;
+                        @include h6;
+
+                        color               : $c-white;
+                    }
+                }
+            }
+
+            .conversion-list {
+                .list-text {
+                    .subtitle {
+                        h4 {
+                            @include display-flex;
+
+                            @include align-items-baseline;
+
+                            span {
+                                &.icon {
+                                    @include mr-2;
+
+                                    i {
+                                        @include p;
+
+                                        color   : $c-white;
+                                    }
+                                }
+
+                                &.text {
+                                    @include font-primary-regular;
+                                    @include h6;
+
+                                    color       : $c-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+
+                .conversion-text {
+                    .title {
+                        h3 {
+                            @include h4;
+                        }
+                    }
+                }
+            }
+
+
+            @include media-breakpoint-down(sm) {
+
+                .conversion-text {
+                    .title {
+                        h3 {
+                            &:after {
+                                left        : 50%;
+
+                                transform   : translateX(-50%);
+                            }
+                        }
+                    }
+                }
+
+                .conversion-list {
+                    .list-text {
+                        .subtitle {
+                            h4 {
+                                justify-content     : center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Secondary
+
+        &.secondary {
+            .conversion-text {
+                .title {
+                    h3 {
+                        @include mb-0;
+
+                        @include font-primary-regular;
+                        @include h6;
+
+                        color           : $c-black;
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+
+                .conversion-text {
+                    .title {
+                        h3 {
+                            @include p;
+
+                            line-height     : 1.35;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

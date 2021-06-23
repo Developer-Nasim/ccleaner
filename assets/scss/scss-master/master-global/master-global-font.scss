@@ -1,0 +1,50 @@
+
+
+// Utitlities
+
+@import "../../Scss-Vendor/_font-face.scss";
+@import "../../Scss-Vendor/_fontello.scss";
+
+// -------------------- Master - Font -------------------- //
+
+// Font - Primary
+
+@font-face {
+  font-family       : 'OpenSans';
+  font-style        : normal;
+  font-weight       : 300;
+  src               : url('../../fonts/OpenSans/OpenSans-Light.ttf');
+  font-display      : swap;
+}
+
+@font-face {
+  font-family       : 'OpenSans';
+  font-style        : normal;
+  font-weight       : 400;
+  src               : url('../../fonts/OpenSans/OpenSans-Regular.ttf');
+  font-display      : swap;
+}
+
+@font-face {
+  font-family       : 'OpenSans';
+  font-style        : normal;
+  font-weight       : 600;
+  src               : url('../../fonts/OpenSans/OpenSans-SemiBold.ttf');
+  font-display      : swap;
+}
+
+@font-face {
+  font-family       : 'OpenSans';
+  font-style        : normal;
+  font-weight       : 700;
+  src               : url('../../fonts/OpenSans/OpenSans-Bold.ttf');
+  font-display      : swap;
+}
+
+@font-face {
+  font-family       : 'OpenSans';
+  font-style        : normal;
+  font-weight       : 800;
+  src               : url('../../fonts/OpenSans/OpenSans-ExtraBold.ttf');
+  font-display      : swap;
+}

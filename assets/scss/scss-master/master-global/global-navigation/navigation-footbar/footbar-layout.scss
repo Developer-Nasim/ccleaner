@@ -1,0 +1,93 @@
+
+
+// Utitlities
+
+@import "../../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Navigation - Footbar - Layout -------------------- //
+
+.footbar {
+
+    // Primary
+
+    &.primary {
+        background-color    : $c-white;
+
+        > .container {
+            @include py-5;
+        }
+
+        .footbar-copyright {
+            @include pt-4;
+            @include mt-5;
+
+            border-top      : 1px solid #e0e2e5;
+
+            .copyright-link {
+                @include display-flex;
+
+                @include align-items-center;
+
+                .link {
+                    @include mr-2;
+
+                    &:after {
+                        @include position-relative;
+
+                        @include ml-1;
+
+                        content         : '-';
+                    }
+
+                    &:last-child {
+                        &:after {
+                            @include display-none;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+
+            .footbar-copyright {
+                @include text-align-center;
+
+                .copyright-link {
+                    @include my-3;
+
+                    flex-wrap               : wrap;
+
+                    justify-content         : center;
+
+                    .link {
+                        @include mr-2;
+
+                        &:after {
+                            @include position-relative;
+
+                            @include ml-1;
+
+                            content         : '-';
+                        }
+
+                        &:last-child {
+                            &:after {
+                                @include display-none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+
+            .col-footbar-outer {
+                .col-footbar-inner {
+                    @include mb-4;
+                }
+            }
+        }
+    }
+}

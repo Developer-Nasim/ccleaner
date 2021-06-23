@@ -1,0 +1,29 @@
+
+
+// Utitlities
+
+@import "../../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Navigation - Navbar - Layout -------------------- //
+
+.navbar {
+
+    // Primary
+
+    &.primary {
+        > .container {
+            @include py-0;
+        }
+
+        .navbar-brand {
+            img {
+                width               : 8.5rem;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+
+            background-color        : $c-white;
+        }
+    }
+}

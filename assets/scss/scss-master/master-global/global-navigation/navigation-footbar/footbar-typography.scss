@@ -1,0 +1,39 @@
+
+
+// Utitlities
+
+@import "../../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Navigation - Footbar - Typography -------------------- //
+
+.footbar {
+
+    // Primary
+
+    &.primary {
+        .footbar-text {
+            .title {
+                h3 {
+                    @include font-primary-bold;
+                    @include h6;
+
+                    color               : #6d6d6d;
+                }
+            }
+        }
+
+        .footbar-copyright {
+            .copyright-text {
+                .caption {
+                    span {
+                        @include font-primary-light;
+
+                        font-size       : .8571em;
+                    
+                        color           : #6d6d6d;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,305 @@
+
+
+// Utitlities
+
+@import "../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Master - Card -------------------- //
+
+// Product Tour
+
+.product-tour-card {
+    
+    // Primary
+
+    &.primary {
+        @include text-align-center;
+
+        @include py-4;
+        @include px-3;
+
+        height                  : 10.75rem;
+
+        background-color        : #3c484f;
+
+        transition              : 0.3s ease;
+
+        .product-tour-image {
+            @include mb-3;
+
+            i {
+                @include h3;
+
+                color           : $c-white;
+            }
+        }
+
+        .product-tour-text {
+            .title {
+                @include mb-1;
+
+                h3 {
+                    @include mb-0;
+
+                    @include font-primary-bold;
+                    @include h6;
+
+                    color       : $c-white;
+                }
+            }
+
+            .desc {
+                p {
+                    @include font-primary-light;
+                    @include small;
+
+                    color       : $c-white;
+                }
+            }
+        }
+
+        &:hover {
+            background-color    : #506470;
+
+            transition          : 0.3s ease;
+        }
+    }
+
+    // Secondary
+
+    &.secondary {
+        @include text-align-center;
+
+        @include py-3;
+
+        .product-tour-image {
+            @include mb-2;
+
+            i {
+                @include display-3;
+
+                color           : $c-white;
+            }
+        }
+
+        .product-tour-text {
+            .title {
+                @include mb-1;
+
+                h3 {
+                    @include mb-0;
+
+                    @include font-primary-regular;
+                    @include h6;
+
+                    color       : $c-white;
+
+                    span {
+                        &.text {
+                            @include mr-2;
+                        }
+
+                        &.icon {
+                            i {
+                                color       : #0598e2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+
+            .product-tour-image {
+                i {
+                    @include h2;
+                }
+            }
+
+            .product-tour-text {
+                .title {
+                    h3 {
+                        font-size           : 10px;
+
+                        span {
+                            &.icon {
+                                @include mr-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Testimony
+
+.testimony-card {
+
+    // Primary
+
+    &.primary {
+        @include p-4;
+
+        background-color            : $c-white;
+
+        border                      : 1px solid #e6e6e6; 
+
+        .testimony-icon {
+            @include mb-3;
+
+            width                   : 6.5rem;
+
+            .icon {
+                svg {
+                    .tp-star {
+                        .tp-star__canvas {
+                            fill        : #00b67a;
+                        }
+
+                        .tp-star__canvas--half {
+                            fill        : #00b67a;
+                        }
+
+                        .tp-star__shape {
+                            fill        : #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .testimony-text {
+            .title {
+                @include mb-2;
+
+                h3 {
+                    @include font-primary-bold;
+                    @include p;
+
+                    color               : $c-black;
+                }
+            }
+
+            .desc {
+                p {
+                    @include mb-0;
+
+                    @include font-primary-regular;
+                    @include small;
+
+                    line-height         : 1.5;
+
+                    color               : $c-black;
+                }
+            }
+        }
+    }
+
+    // Secondary
+
+    &.secondary {
+        @include p-5;
+
+        background-color            : $c-white;
+         
+        border-radius               : 1em;
+
+        box-shadow                  : 0 .5rem 1rem rgba(0,0,0,.15);
+
+        .testimony-quote {
+            @include mb-4;
+
+            height                  : 11.5rem;
+
+            .quote {
+                span {
+                    @include font-primary-regular;
+                    @include p;
+
+                    line-height     : 1.75;
+
+                    color           : $c-black;
+                }
+            }
+        }
+
+        .testimony-profile {
+            @include display-flex;
+
+            @include align-items-center;
+
+            .profile-image {
+                @include display-flex;
+
+                @include align-items-center;
+
+                @include mr-3;
+
+                width               : 35%;
+                height              : 2.5rem;
+            }
+
+            .profile-text {
+                .title {
+                    h3 {
+                        @include mb-0;
+
+                        @include font-primary-bold;
+                        @include p;
+
+                        color       : $c-black;
+                    }
+                }
+
+                .subtitle {
+                    h4 {
+                        @include mb-0;
+
+                        @include font-primary-regular;
+                        @include small;
+
+                        line-height     : 1.35;
+
+                        color           : $c-grey;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(md) {
+
+            .testimony-quote {
+                height                  : 13rem;
+            }
+
+            .testimony-profile {
+                .profile-image {
+                    width               : 40%;
+                }
+            }
+        }
+
+
+        @include media-breakpoint-down(sm) {
+
+            .testimony-quote {
+                height                  : 14rem;
+            }
+
+            .testimony-profile {
+                @include display-block;
+
+                @include text-align-center;
+
+                .profile-image {
+                    @include mb-2;
+                    @include mx-auto;
+
+                    width               : 70%;
+                }
+            }
+        }
+    }
+}

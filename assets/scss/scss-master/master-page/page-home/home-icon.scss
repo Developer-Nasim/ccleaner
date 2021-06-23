@@ -1,0 +1,109 @@
+
+
+// Utitlities
+
+@import "../../../Scss-Utilities/Utilities.scss";
+
+// -------------------- Page - Home - Icon -------------------- //
+
+.home {
+
+    // Product Tour
+
+    .product-tour {
+        
+        // Primary
+
+        &.primary {
+
+            // Content
+
+            .product-tour-content {
+                .content-title {
+                    .title-icon {
+                        i {
+                            @include p;
+
+                            color           : $c-grey;
+                        }
+                    }
+                }
+
+                .content-info {
+                    .info-icon {
+                        i {
+                            @include h2;
+
+                            color           : #42b148;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Testimonial
+
+    .testimonial {
+        
+        // Primary
+
+        &.primary {
+            .testimonial-rating {
+                .rating-image {
+                    svg {
+                        .tp-star {
+                            .tp-star__canvas {
+                                fill        : #00b67a;
+                            }
+
+                            .tp-star__canvas--half {
+                                fill        : #00b67a;
+                            }
+
+                            .tp-star__shape {
+                                fill        : #ffffff;
+                            }
+
+                            &:last-child {
+                                .tp-star__canvas {
+                                    fill        : #d2d2d2;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Statistic
+
+    .statistic {
+
+        // Primary
+
+        &.primary {
+            .statistic-info {
+                .info-icon {
+                    i {
+                        @include display-flex;
+
+                        @include align-items-center;
+
+                        @include mx-auto;
+
+                        justify-content         : center;
+
+                        width                   : 3.5rem;
+                        height                  : 3.5rem;
+
+                        background-color        : rgba(98, 127, 21, 0.15);
+
+                        border-radius           : 100%;
+                    }
+                }
+            }
+        }
+    }
+}
